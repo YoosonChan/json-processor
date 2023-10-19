@@ -1,3 +1,9 @@
+<script setup lang="ts">
+definePageMeta({
+  layout: 'default'
+})
+</script>
+
 <template>
   <div>
     <h3>This is index page.</h3>
