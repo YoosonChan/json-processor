@@ -15,7 +15,7 @@ type JsonType = "array" | "object"
  * @param jsonString 
  * @returns 
  */
-export function useJsonProcessorForArray(jsonString: string) {
+export function jsonProcessorForArray(jsonString: string) {
   let parsedData: JsonProcessorTarget | undefined
   try {
     parsedData = JSON.parse(jsonString)

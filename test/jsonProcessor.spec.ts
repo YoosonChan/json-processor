@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { useJsonProcessorForArray } from '../composables/jsonProcessor';
+import { jsonProcessorForArray } from '../utils/jsonProcessor';
 const objectJsonString = `
   {
     "name": "test",
@@ -60,12 +60,12 @@ const errorJsonString = `
 describe("get type of json string", () => {
   test('get type of object json string', () => {
     const expectType = 'object'
-    const jsonProcessor = useJsonProcessorForArray(objectJsonString)
+    const jsonProcessor = jsonProcessorForArray(objectJsonString)
     expect(jsonProcessor.type).toEqual(expectType)
   })
   test('get type of array json string', () => {
     const expectType = 'array'
-    const jsonProcessor = useJsonProcessorForArray(arrayJsonString)
+    const jsonProcessor = jsonProcessorForArray(arrayJsonString)
     expect(jsonProcessor.type).toEqual(expectType)
   })
 })
@@ -104,17 +104,17 @@ describe("get values of json string", () => {
     ]
   ]
   test('get values of object json string', () => {
-    const jsonProcessor = useJsonProcessorForArray(objectJsonString)
+    const jsonProcessor = jsonProcessorForArray(objectJsonString)
     const values = jsonProcessor.values
     expect(values).toEqual(expectObjectJsonValues)
   })
   test('get values of array json string', () => {
-    const jsonProcessor = useJsonProcessorForArray(arrayJsonString)
+    const jsonProcessor = jsonProcessorForArray(arrayJsonString)
     const values = jsonProcessor.values
     expect(values).toEqual(expectArrayJsonValues)
   })
   test('get values of error json string', () => {
-    const jsonProcessor = useJsonProcessorForArray(errorJsonString)
+    const jsonProcessor = jsonProcessorForArray(errorJsonString)
     const values = jsonProcessor.values
     expect(values).toEqual([])
   })
