@@ -7,6 +7,9 @@ export default defineNuxtConfig({
       failOnError: false,
     },
   },
+  app:{
+    baseURL: '/json-processor/'
+  }
   // routeRules: {
   //   '/': {
   //     ssr: false,
