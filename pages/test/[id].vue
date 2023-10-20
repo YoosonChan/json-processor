@@ -5,7 +5,7 @@ definePageMeta({
     console.log(route.params.id);
     return /^\d+$/.test(route.params.id as string)
   },
-  middleware: 'test'
+  // middleware: 'test'
 })
 </script>
 
