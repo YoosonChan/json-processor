@@ -5,5 +5,6 @@
 <template>
   <div>
     <p>This is custom layout.</p>
+    <NuxtPage />
   </div>
 </template>
