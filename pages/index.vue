@@ -11,7 +11,7 @@ definePageMeta({
     <p>JSON Processor</p>
     <p>It's a JSON processor for my project. </p>
     <NuxtLink to="custom">To custom</NuxtLink>
-    <NuxtLink to="test/123">To test with id</NuxtLink>
-    <NuxtLink to="test/id">To test with wrong id</NuxtLink>
+    <NuxtLink to="/test/123">To test with id</NuxtLink>
+    <NuxtLink to="/test/id">To test with wrong id</NuxtLink>
   </div>
 </template>
